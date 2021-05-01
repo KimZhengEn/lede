@@ -14,6 +14,11 @@ on:
   #  types: [published]
   repository_dispatch:
   workflow_dispatch:
+   inputs:
+     ssh:
+        description: 'SSH connection to Actions'
+        required: true
+        default: 'true'
 
 jobs:
 
