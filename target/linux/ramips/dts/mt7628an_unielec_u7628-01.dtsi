@@ -63,15 +63,18 @@
 
 	leds {
 		compatible = "gpio-leds";
-
+                
 		led_power: power {
 			label = "u7628-01:green:power";
-			gpios = <&gpio 44 GPIO_ACTIVE_LOW>;
-		};
+			//gpios = <&gpio 44 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio 3 GPIO_ACTIVE_LOW>;
+		}; 
+		
 
 		wlan {
 			label = "u7628-01:green:wlan";
-			gpios = <&gpio 11 GPIO_ACTIVE_LOW>;
+			//gpios = <&gpio 11 GPIO_ACTIVE_LOW>;
+			gpios = <&gpio 44 GPIO_ACTIVE_LOW>;
 		};
 
 		wan {
@@ -83,7 +86,7 @@
 			label = "u7628-01:green:lan1";
 			gpios = <&gpio 42 GPIO_ACTIVE_LOW>;
 		};
-
+                /*
 		lan2 {
 			label = "u7628-01:green:lan2";
 			gpios = <&gpio 41 GPIO_ACTIVE_LOW>;
@@ -104,7 +107,7 @@
 			gpios = <&gpio 37 GPIO_ACTIVE_LOW>;
 			trigger-sources = <&ohci_port1>, <&ehci_port1>;
 			linux,default-trigger = "usbport";
-		};
+		}; */
 	};
 };
 
